@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Introduction to WebGL</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lora|Open+Sans" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+
+                <section>
+
+                    <section data-background="images/title_slide_bg.jpg" data-background-repeat="repeat" data-background-size="300px">
+
+                        <h1 class="slide-title">WebGL</h1>
+                        <h2>Overview & Use Cases</h2>
+                        <p>
+                            <small>Created by <a href="http://johndavidfive.com" target="_blank">John Martin</a> / <a href="http://twitter.com/johndavidfive" target="_blank">@johndavidfive</a></small>
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Who Is This Guy?</h1>
+                        <ul>
+                            <li>Bachelors Secondary Education Math</li>
+                            <li>MA Discrete Math</li>
+                            <li>Web Developer with Unicon last 6 years</li>
+                            <li>Primarily in UI / UX</li>
+                            <li>&lt;3 Information Theory</li>
+                            <li>&lt;3 Machine Learning</li>
+                            <li>&lt;3 Education</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Why Talk WebGL?</h1>
+                        <ul>
+                            <li>I like video games</li>
+                            <li>I love buttery smooth UX</li>
+                            <li>I appreciate brain's ability to utilize 3D</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Agenda</h1>
+                        <ul>
+                            <li>Understand WebGL</li>
+                            <li>Discuss Use Cases</li>
+                            <li>Explore Common Libraries</li>
+                            <li>Code Demo</li>
+                            <li>Discuss Web Optimizations</li>
+                        </ul>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section data-background="images/title_slide_bg.jpg" data-background-repeat="repeat" data-background-size="300px">
+                        <h1 class="slide-title">What is WebGL?</h1>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">It's a Standard</h2>
+                        <ul>
+                            <li>Managed by Khronos Group</li>
+                            <li>Implemented by browser vendors</li>
+                            <li>Exposes GPU to browsers</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Can I Use?</h2>
+                        <img src="images/can_i_use.png"/>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Uses of WebGL</h2>
+                        <ul>
+                            <li>Accelerated Processing (ML & Physics)</li>
+                            <li>Accelerated 2D and 3D graphics</li>
+                        </ul>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section data-background="images/title_slide_bg.jpg" data-background-repeat="repeat" data-background-size="300px">
+                        <h1 class="slide-title">Graphics Examples</h1>
+                    </section>
+
+                    <section data-background="images/quake.png" data-background-size="fill">
+                        <h2 class="slide-title"><a href="http://media.tojicode.com/q3bsp/" target="_blank">Quake Demo</a></h2>
+                    </section>
+
+                    <section data-background="images/bio_digital.png" data-background-size="fill">
+                        <h2 class="slide-title"><a href="https://www.biodigital.com/" target="_blank">The Bioigital Human</a></h2>
+                    </section>
+
+                    <section data-background="images/house_tours.png" data-background-size="fill">
+                        <h2 class="slide-title"><a href="http://tour.homevisit.com/tour/matterportViewer.asp?id=91830%20&mpID=yDaxeF5Kqte" target="_blank">Home Tours</a></h2>
+                    </section>
+
+
+                    <section data-background="images/apple_watch.png" data-background-size="fill">
+                        <h2 class="slide-title"><a href="https://www.apple.com/apple-watch-series-3/" target="_blank">Apple Watch</a></h2>
+                    </section>
+
+                    <section data-background="images/street_view.png" data-background-size="fill">
+                        <h2 class="slide-title"><a href="https://www.google.com/maps/@35.1987582,-111.6473808,3a,75y,149.12h,80.6t/data=!3m7!1e1!3m5!1s4YY7ciCE3lJeWaZohIdLiA!2e0!6s%2F%2Fgeo0.ggpht.com%2Fcbk%3Fpanoid%3D4YY7ciCE3lJeWaZohIdLiA%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D72.43043%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656" target="_blank">Google Maps (Street View)</a></h2>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">AR & VR Examples</h2>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Proper Use Cases?</h2>
+                        <ul>
+                            <li>Web based games</li>
+                            <li>Compelling UX</li>
+                            <li>Required 3D interface</li>
+                        </ul>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section data-background="images/title_slide_bg.jpg" data-background-repeat="repeat" data-background-size="300px">
+                        <h1 class="slide-title">Libraries & Tools</h1>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title"><a href="https://threejs.org/" target="_blank">ThreeJS</a></h2>
+                        <p>Application agnostic framework for 3D scene and object management.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title"><a href="http://www.cannonjs.org/" target="_blank">CannonJS</a></h2>
+                        <p>A decoupled physics engine (AmmoJS also a good options with solid community).</p>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title"><a href="https://github.com/tweenjs/tween.js/" target="_blank">TweenJS</a></h2>
+                        <p>Simple chainable animations/tweeing library.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title"><a href="https://github.com/playcanvas/engine" target="_blank">Play Canvas</a></h2>
+                        <p>Full game development framework.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title"><a href="https://docs.unity3d.com/Manual/webgl-building.html" target="_blank">Unity</a></h2>
+                        <p>See past presentations :-)</p>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section data-background="images/title_slide_bg.jpg" data-background-repeat="repeat" data-background-size="300px">
+                        <h1 class="slide-title">Code Demo</h1>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section data-background="images/title_slide_bg.jpg" data-background-repeat="repeat" data-background-size="300px">
+                        <h1 class="slide-title">Performance Considerations</h1>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">JavaScript</h2>
+                        <ul>
+                            <li>Single Threaded</li>
+                            <li>Scripting Language (slower)</li>
+                        </ul>
+                        <img src="images/javascript.png"/>
+                        <p><small>( <span class="parens">C Performance is 1.0</span> )</small></p>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Optimizations</h2>
+                        <ul>
+                            <li>Scripting Improvements
+                                <ul>
+                                    <li>Optimize Algorithms (Big-O)</li>
+                                    <li>Chunking</li>
+                                </ul>
+                            </li>
+                            <li>Web Assembly ( <span class="parens"> pre-compiled code</span> )</li>
+                            <li>Web Workers ( <span class="parens">multi-threading</span> )</li>
+                        </ul>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section data-background="images/title_slide_bg.jpg" data-background-repeat="repeat" data-background-size="300px">
+                        <h1 class="slide-title">Performance Optimization Demo</h1>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Optimizations</h2>
+                        <ul>
+                            <li>Textures</li>
+                            <li>Merged Geometries</li>
+                            <li>Buffer Geometries</li>
+                            <li>LOD Object Cloning</li>
+                            <li>Web Workers</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Textures</h2>
+                        <ul>
+                            <li>Texture re-use</li>
+                            <li>Minimal sizes</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Merged Geometries</h2>
+                        <ul>
+                            <li>Non selectable building objects</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Buffer Geometry</h2>
+                        <ul>
+                            <li>Tree tops & Tree Trunks</li>
+                            <li>Bushes / Grass (future)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">LOD Object Cloning</h2>
+                        <ul>
+                            <li>One clonable instance per LOD level</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Web Workers</h2>
+                        <ul>
+                            <li>LOD Terrain</li>
+                            <li>LOD Library changes</li>
+                        </ul>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section data-background="images/title_slide_bg.jpg" data-background-repeat="repeat" data-background-size="300px">
+                        <h1 class="slide-title">References</h1>
+                        <ul>
+                            <li><a href="" target="_blank">Stuff</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Industry Leaders</h2>
+                        <ul>
+                            <li>ThreeJS <a href="https://twitter.com/mrdoob" target="_blank">Ricardo Cabello</a></li>
+                        </ul>
+                    </section>
+
+                    <section data-background="images/title_slide_bg.jpg" data-background-repeat="repeat" data-background-size="300px">
+                        <h2 class="slide-title">That's all folks!</h2>
+                    </section>
+
+                </section>
+
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                history: true,
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>
