@@ -42,15 +42,15 @@
                     </section>
 
                     <section>
-                        <h2 class="slide-title">Who Is This Guy?</h1>
+                        <h2 class="slide-title">My Background</h1>
                         <ul>
                             <li>Bachelors Secondary Education Math</li>
                             <li>MA Discrete Math</li>
-                            <li>Web Developer with Unicon last 6 years</li>
+                            <li>Web developer with Unicon last 6 years</li>
                             <li>Primarily in UI / UX</li>
-                            <li>&lt;3 Information Theory</li>
-                            <li>&lt;3 Machine Learning</li>
-                            <li>&lt;3 Education</li>
+                            <li><span class="buttery">&lt;3</span> Information Theory</li>
+                            <li><span class="buttery">&lt;3</span> Machine Learning</li>
+                            <li><span class="buttery">&lt;3</span> Education</li>
                         </ul>
                     </section>
 
@@ -59,7 +59,7 @@
                         <ul>
                             <li>I like video games</li>
                             <li>I love buttery smooth UX</li>
-                            <li>I appreciate brain's ability to utilize 3D</li>
+                            <li>Accelerated graphics in Web Apps powerful!</li>
                         </ul>
                     </section>
 
@@ -134,11 +134,17 @@
                     </section>
 
                     <section>
-                        <h2 class="slide-title">AR & VR Examples</h2>
+                        <h2 class="slide-title">AR & VR with WebGL?</h2>
+                        <ul>
+                            <li><a href="https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf">JavaScript AR.js</a></li>
+                            <li><a href="https://github.com/Stinkstudios/arkit-web">iOS ARKit</a></li>
+                            <li><a href="https://webvr.info/">WebVR</a></li>
+                            <li><a href="https://aframe.io/">A-Frame WebVR Framework</a></li>
+                        </ul>
                     </section>
 
                     <section>
-                        <h2 class="slide-title">Proper Use Cases?</h2>
+                        <h2 class="slide-title">Mainstream WebGL Use Cases</h2>
                         <ul>
                             <li>Web based games</li>
                             <li>Compelling UX</li>
@@ -161,7 +167,8 @@
 
                     <section>
                         <h2 class="slide-title"><a href="http://www.cannonjs.org/" target="_blank">CannonJS</a></h2>
-                        <p>A decoupled physics engine (AmmoJS also a good options with solid community).</p>
+                        <p>A decoupled physics engine.</p>
+                        <p><small>(AmmoJS also a good options with solid community).</small></p>
                     </section>
 
                     <section>
@@ -185,6 +192,22 @@
 
                     <section data-background="images/title_slide_bg.jpg" data-background-repeat="repeat" data-background-size="300px">
                         <h1 class="slide-title">Code Demo</h1>
+                        <h2>Draw a Triangle</h2>
+                    </section>
+
+                    <section>
+                        <h1 class="slide-title">Straight WebGL</h1>
+                        <ul>
+                            <li><a href="https://github.com/gpjt/webgl-lessons/blob/master/lesson01/index.html" target="_blank">"The Lessons" Code</a></li>
+                            <li><a href="http://learningwebgl.com/blog/?p=28" target="_blank">"The Lessons" Output</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h1 class="slide-title">ThreeJS</h1>
+                        <ul>
+                            <li><a href="https://github.com/gitsome/webgl_presentation_demo" target="_blank">Demo Code</a></li>
+                        </ul>
                     </section>
 
                 </section>
@@ -206,11 +229,22 @@
                     </section>
 
                     <section>
-                        <h2 class="slide-title">Optimizations</h2>
+                        <h2 class="slide-title">JavaScript & WebGL</h2>
                         <ul>
-                            <li>Scripting Improvements
+                            <li>Keeping 60FPS is important.</li>
+                            <li>Use requestAnimationFrame <a href="https://www.html5rocks.com/en/tutorials/speed/rendering/" target="_blank">NOT setInterval</a>.</li>
+                            <li>RequestAnimationFrame runs at 60Hz.</li>
+                            <li>Your render routine has ~16ms to run.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Script Optimizations</h2>
+                        <ul>
+                            <li>Processing Improvements
                                 <ul>
                                     <li>Optimize Algorithms (Big-O)</li>
+                                    <li>Reduce Garbage Collection</li>
                                     <li>Chunking</li>
                                 </ul>
                             </li>
@@ -225,16 +259,19 @@
 
                     <section data-background="images/title_slide_bg.jpg" data-background-repeat="repeat" data-background-size="300px">
                         <h1 class="slide-title">Performance Optimization Demo</h1>
+                        <h2>Level Of Detail Terrain</h2>
                     </section>
 
                     <section>
                         <h2 class="slide-title">Optimizations</h2>
+                        <p>Scripting & WebGL Optimizations</p>
                         <ul>
-                            <li>Textures</li>
-                            <li>Merged Geometries</li>
-                            <li>Buffer Geometries</li>
-                            <li>LOD Object Cloning</li>
-                            <li>Web Workers</li>
+                            <li>Textures ( <span class="parens">WebGL</span> )</li>
+                            <li>Merged Geometries ( <span class="parens">WebGL</span> )</li>
+                            <li>Buffer Geometries ( <span class="parens">WebGL</span> )</li>
+                            <li>Shaders ( <span class="parens">WebGL</span> )</li>
+                            <li>LOD Object Cloning ( <span class="parens2">Script</span> )</li>
+                            <li>Web Workers ( <span class="parens2">Script</span> )</li>
                         </ul>
                     </section>
 
@@ -262,6 +299,14 @@
                     </section>
 
                     <section>
+                        <h2 class="slide-title">Shaders</h2>
+                        <ul>
+                            <li>Offload styling effects to Shaders</li>
+                            <li>Customize existing ThreeJS Shaders</li>
+                        </ul>
+                    </section>
+
+                    <section>
                         <h2 class="slide-title">LOD Object Cloning</h2>
                         <ul>
                             <li>One clonable instance per LOD level</li>
@@ -281,9 +326,42 @@
                 <section>
 
                     <section data-background="images/title_slide_bg.jpg" data-background-repeat="repeat" data-background-size="300px">
+                        <h1 class="slide-title">One More Thing...</h1>
+                        <h2 class="fragment">Non-WebGL GPU Accelerated Graphics</h2>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Composite Only Style Props</h2>
+                        <p>Composite only style properties when changed do not require style or layout calculations, they also do not force a repaint. The only proessing is the compositing of layers in the GPU.</p>
+                        <ul>
+                            <li>Opacity</li>
+                            <li>Transform</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Transform</h2>
+                        <p><small>Allows transformation of layers in 3D space.</small></p>
+                        <img src="images/can_i_use_transform.png" />
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">CSS 3D Transform Demo</h2>
+                        <ul>
+                            <li><a href="https://threejs.org/examples/css3d_periodictable.html" target="_blank">Periodic Table (ThreeJS)</a></li>
+                            <li><a href="https://ionicframework.com/" target="_blank">Ionic Framework</a></li>
+                            <li><a href="https://github.com/hakimel/reveal.js/" target="_blank">This presentation. NOT! ( <span class="parens">RevealJS</span> )</a></li>
+                        </ul>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section data-background="images/title_slide_bg.jpg" data-background-repeat="repeat" data-background-size="300px">
                         <h1 class="slide-title">References</h1>
                         <ul>
-                            <li><a href="" target="_blank">Stuff</a></li>
+                            <li><a href="https://www.html5rocks.com/en/tutorials/speed/rendering/" target="_blank">Frame Budget</a></li>
                         </ul>
                     </section>
 
@@ -291,10 +369,12 @@
                         <h2 class="slide-title">Industry Leaders</h2>
                         <ul>
                             <li>ThreeJS <a href="https://twitter.com/mrdoob" target="_blank">Ricardo Cabello</a></li>
+                            <li>Web Perf <a href="https://twitter.com/paul_irish" target="_blank">Paul Irish</a></li>
+                            <li>Web Perf <a href="https://twitter.com/aerotwist" target="_blank">Paul Lewis</a></li>
                         </ul>
                     </section>
 
-                    <section data-background="images/title_slide_bg.jpg" data-background-repeat="repeat" data-background-size="300px">
+                    <section>
                         <h2 class="slide-title">That's all folks!</h2>
                     </section>
 
