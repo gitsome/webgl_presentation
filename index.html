@@ -21,7 +21,7 @@
             link.rel = 'stylesheet';
             link.type = 'text/css';
             link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-            document.getElementsByTagName( 'head' )[0].appendChild( link );
+            document.getElementsByTagName('head')[0].appendChild(link);
         </script>
 
     </head>
@@ -57,14 +57,14 @@
                     <section>
                         <h2 class="slide-title">Why Talk WebGL?</h1>
                         <ul>
-                            <li>I like video games</li>
+                            <li>I like video games and 3D</li>
                             <li>I love buttery smooth UX</li>
                             <li>Accelerated graphics in Web Apps makes me...</li>
                         </ul>
                     </section>
 
                     <section data-background="images/excited.gif">
-                        <h2 class="slide-title">Excited!!!</h1>
+                        <h2 class="slide-title erin-title">Excited!!!</h1>
                     </section>
 
                     <section>
@@ -92,7 +92,7 @@
                             <li>Managed by Khronos Group</li>
                             <li>Implemented by browser vendors</li>
                             <li>Exposes GPU to browsers</li>
-                            <li>OpenGL ES is the interface with the GPU</li>
+                            <li>OpenGL ES 2.0 is the interface with the GPU</li>
                         </ul>
                     </section>
 
@@ -106,6 +106,14 @@
                         <ul>
                             <li>Accelerated Processing ( <span class="parens">ML & Physics</span> )</li>
                             <li>Accelerated 2D and 3D graphics</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">Limitations of WebGL</h2>
+                        <ul>
+                            <li>OpenGL ES 2.0 vs OpenGL</li>
+                            <li>JavaScript</li>
                         </ul>
                     </section>
 
@@ -171,9 +179,19 @@
                     </section>
 
                     <section>
-                        <h2 class="slide-title"><a href="http://www.cannonjs.org/" target="_blank">CannonJS</a></h2>
+                        <h2 class="slide-title"><a href="https://github.com/playcanvas/engine" target="_blank">Play Canvas</a></h2>
+                        <p>Full game development framework.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title"><a href="http://www.cannonjs.org/" target="_blank">CannonJS ( <span class="parens">3D</span> )</a></h2>
                         <p>A decoupled physics engine.</p>
                         <p>( <span class="parens">AmmoJS also a good option with a solid community</span> )</p>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title"><a href="http://box2d-js.sourceforge.net/" target="_blank">Box2DJS ( <span class="parens">2D</span> )</a></h2>
+                        <p>A decoupled physics engine for 2D.</p>
                     </section>
 
                     <section>
@@ -182,13 +200,8 @@
                     </section>
 
                     <section>
-                        <h2 class="slide-title"><a href="https://github.com/playcanvas/engine" target="_blank">Play Canvas</a></h2>
-                        <p>Full game development framework.</p>
-                    </section>
-
-                    <section>
                         <h2 class="slide-title"><a href="https://docs.unity3d.com/Manual/webgl-building.html" target="_blank">Unity</a></h2>
-                        <p>See past presentations :-)</p>
+                        <p>Evan?</p>
                     </section>
 
                 </section>
@@ -201,7 +214,7 @@
                     </section>
 
                     <section>
-                        <h1 class="slide-title">Straight WebGL</h1>
+                        <h2 class="slide-title">Straight WebGL</h2>
                         <ul>
                             <li><a href="https://github.com/gpjt/webgl-lessons/blob/master/lesson01/index.html" target="_blank">"The Lessons" Code</a></li>
                             <li><a href="http://learningwebgl.com/blog/?p=28" target="_blank">"The Lessons" Output</a></li>
@@ -209,18 +222,18 @@
                     </section>
 
                     <section>
-                        <h1 class="slide-title">ThreeJS</h1>
+                        <h2 class="slide-title">ThreeJS</h2>
                         <ul>
                             <li><a href="https://github.com/gitsome/webgl_presentation_demo" target="_blank">Demo Code</a></li>
                         </ul>
                     </section>
 
                     <section>
-                        <h2 class="slide-title">Lesson learned...</h1>
+                        <h2 class="slide-title">Lesson learned...</h2>
                     </section>
 
                     <section data-background="images/excited.gif">
-                        <h2 class="slide-title">Use a Framework!!!</h1>
+                        <h2 class="slide-title erin-title">Use a Framework!!!</h2>
                     </section>
 
                 </section>
@@ -281,13 +294,14 @@
 
                     <section>
                         <h2 class="slide-title">Optimizations</h2>
-                        <p>Scripting & WebGL Optimizations</p>
                         <ul>
                             <li>Textures ( <span class="parens">WebGL</span> )</li>
                             <li>Merged Geometries ( <span class="parens">WebGL</span> )</li>
                             <li>Instance Geometries ( <span class="parens">WebGL</span> )</li>
                             <li>Shaders ( <span class="parens">WebGL</span> )</li>
+                            <li>LOD Terrain ( <span class="parens2">Script</span> )</li>
                             <li>LOD Object Cloning ( <span class="parens2">Script</span> )</li>
+                            <li>LOD Physics ( <span class="parens2">Script</span> )</li>
                             <li>Web Workers ( <span class="parens2">Script</span> )</li>
                         </ul>
                     </section>
@@ -320,8 +334,16 @@
                     <section>
                         <h2 class="slide-title">Shaders</h2>
                         <ul>
-                            <li>Customize existing ThreeJS Shaders</li>
                             <li>Offload styling effects to Shaders</li>
+                            <li>Customize existing ThreeJS Shaders</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">LOD Terrain</h2>
+                        <ul>
+                            <li><a href="http://tulrich.com/geekstuff/sig-notes.pdf" target="_blank">LOD Terrain Paper</a></li>
+                            <li>Reduces vertices</li>
                         </ul>
                     </section>
 
@@ -334,12 +356,31 @@
                     </section>
 
                     <section>
+                        <h2 class="slide-title">LOD Physics</h2>
+                        <ul>
+                            <li>Highest resolution terrain</li>
+                            <li>Highest resolution buildings</li>
+                        </ul>
+                    </section>
+
+                    <section>
                         <h2 class="slide-title">Web Workers</h2>
                         <ul>
                             <li>LOD Terrain</li>
                             <li>LOD Library changes</li>
                         </ul>
                     </section>
+
+                    <section>
+                        <h2 class="slide-title">Web ASM / Worker Limitiations</h2>
+                        <p>Both Web Assembly and Web Workers have restrictions on message passing.</p>
+                        <ul>
+                            <li>Most messages are copies ( <span class="parens">overhead</span> )</li>
+                            <li>Array Buffers can be "<span class="buttery">transferrable</span>"</li>
+                        </ul>
+                    </section>
+
+
 
                 </section>
 
@@ -395,7 +436,7 @@
                     </section>
 
                     <section data-background="images/excited.gif">
-                        <h2 class="slide-title">That's all folks!</h2>
+                        <h2 class="slide-title erin-title">That's all folks!</h2>
                     </section>
 
                 </section>

@@ -53,6 +53,10 @@ body {
 .reveal pre code {
     padding: 15px !important;
 }
+.erin-title {
+    margin-top: 35% !important;
+    font-size: 200% !important;
+}
 /*********************************************
  * HEADERS
  *********************************************/
