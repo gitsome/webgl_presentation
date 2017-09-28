@@ -59,8 +59,12 @@
                         <ul>
                             <li>I like video games</li>
                             <li>I love buttery smooth UX</li>
-                            <li>Accelerated graphics in Web Apps powerful!</li>
+                            <li>Accelerated graphics in Web Apps makes me...</li>
                         </ul>
+                    </section>
+
+                    <section data-background="images/excited.gif">
+                        <h2 class="slide-title">Excited!!!</h1>
                     </section>
 
                     <section>
@@ -88,6 +92,7 @@
                             <li>Managed by Khronos Group</li>
                             <li>Implemented by browser vendors</li>
                             <li>Exposes GPU to browsers</li>
+                            <li>OpenGL ES is the interface with the GPU</li>
                         </ul>
                     </section>
 
@@ -99,7 +104,7 @@
                     <section>
                         <h2 class="slide-title">Uses of WebGL</h2>
                         <ul>
-                            <li>Accelerated Processing (ML & Physics)</li>
+                            <li>Accelerated Processing ( <span class="parens">ML & Physics</span> )</li>
                             <li>Accelerated 2D and 3D graphics</li>
                         </ul>
                     </section>
@@ -136,10 +141,10 @@
                     <section>
                         <h2 class="slide-title">AR & VR with WebGL?</h2>
                         <ul>
-                            <li><a href="https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf">JavaScript AR.js</a></li>
-                            <li><a href="https://github.com/Stinkstudios/arkit-web">iOS ARKit</a></li>
-                            <li><a href="https://webvr.info/">WebVR</a></li>
-                            <li><a href="https://aframe.io/">A-Frame WebVR Framework</a></li>
+                            <li><a href="https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf" target="_blank">JavaScript AR.js</a></li>
+                            <li><a href="https://github.com/Stinkstudios/arkit-web" target="_blank">iOS ARKit</a></li>
+                            <li><a href="https://webvr.info/" target="_blank">WebVR</a></li>
+                            <li><a href="https://aframe.io/" target="_blank">A-Frame WebVR Framework</a></li>
                         </ul>
                     </section>
 
@@ -210,12 +215,30 @@
                         </ul>
                     </section>
 
+                    <section>
+                        <h2 class="slide-title">Lesson learned...</h1>
+                    </section>
+
+                    <section data-background="images/excited.gif">
+                        <h2 class="slide-title">Use a Framework!!!</h1>
+                    </section>
+
                 </section>
 
                 <section>
 
                     <section data-background="images/title_slide_bg.jpg" data-background-repeat="repeat" data-background-size="300px">
                         <h1 class="slide-title">Performance Considerations</h1>
+                    </section>
+
+                    <section>
+                        <h2 class="slide-title">WebGL Draw Loop</h2>
+                        <ul>
+                            <li>Keeping <span class="buttery">CONSISTENT</span> 60fps is important.</li>
+                            <li>Use requestAnimationFrame <a href="https://www.html5rocks.com/en/tutorials/speed/rendering/" target="_blank">NOT setInterval</a>.</li>
+                            <li>RequestAnimationFrame runs at 60Hz.</li>
+                            <li>Your render routine has ~16ms to run.</li>
+                        </ul>
                     </section>
 
                     <section>
@@ -226,16 +249,6 @@
                         </ul>
                         <img src="images/javascript.png"/>
                         <p><small>( <span class="parens">C Performance is 1.0</span> )</small></p>
-                    </section>
-
-                    <section>
-                        <h2 class="slide-title">JavaScript & WebGL</h2>
-                        <ul>
-                            <li>Keeping 60FPS is important.</li>
-                            <li>Use requestAnimationFrame <a href="https://www.html5rocks.com/en/tutorials/speed/rendering/" target="_blank">NOT setInterval</a>.</li>
-                            <li>RequestAnimationFrame runs at 60Hz.</li>
-                            <li>Your render routine has ~16ms to run.</li>
-                        </ul>
                     </section>
 
                     <section>
@@ -262,13 +275,17 @@
                         <h2>Level Of Detail Terrain</h2>
                     </section>
 
+                    <section data-background="images/terrain.png">
+                        <h2 class="slide-title">Demo</h2>
+                    </section>
+
                     <section>
                         <h2 class="slide-title">Optimizations</h2>
                         <p>Scripting & WebGL Optimizations</p>
                         <ul>
                             <li>Textures ( <span class="parens">WebGL</span> )</li>
                             <li>Merged Geometries ( <span class="parens">WebGL</span> )</li>
-                            <li>Buffer Geometries ( <span class="parens">WebGL</span> )</li>
+                            <li>Instance Geometries ( <span class="parens">WebGL</span> )</li>
                             <li>Shaders ( <span class="parens">WebGL</span> )</li>
                             <li>LOD Object Cloning ( <span class="parens2">Script</span> )</li>
                             <li>Web Workers ( <span class="parens2">Script</span> )</li>
@@ -286,23 +303,25 @@
                     <section>
                         <h2 class="slide-title">Merged Geometries</h2>
                         <ul>
-                            <li>Non selectable building objects</li>
+                            <li>Share a draw call, uniforms, shaders</li>
+                            <li>Non selectable objects</li>
                         </ul>
                     </section>
 
                     <section>
-                        <h2 class="slide-title">Buffer Geometry</h2>
+                        <h2 class="slide-title">Instance Geometry</h2>
+                        <h3>WebGL 2.0 ( <span class="parens">OpenGL ES 3.0</span> )</h3>
                         <ul>
-                            <li>Tree tops & Tree Trunks</li>
-                            <li>Bushes / Grass (future)</li>
+                            <li>Single draw loops over attributes</li>
+                            <li>Tree tops & tree trunks</li>
                         </ul>
                     </section>
 
                     <section>
                         <h2 class="slide-title">Shaders</h2>
                         <ul>
-                            <li>Offload styling effects to Shaders</li>
                             <li>Customize existing ThreeJS Shaders</li>
+                            <li>Offload styling effects to Shaders</li>
                         </ul>
                     </section>
 
@@ -310,6 +329,7 @@
                         <h2 class="slide-title">LOD Object Cloning</h2>
                         <ul>
                             <li>One clonable instance per LOD level</li>
+                            <li>Cache and re-use materials</li>
                         </ul>
                     </section>
 
@@ -368,13 +388,13 @@
                     <section>
                         <h2 class="slide-title">Industry Leaders</h2>
                         <ul>
-                            <li>ThreeJS <a href="https://twitter.com/mrdoob" target="_blank">Ricardo Cabello</a></li>
-                            <li>Web Perf <a href="https://twitter.com/paul_irish" target="_blank">Paul Irish</a></li>
-                            <li>Web Perf <a href="https://twitter.com/aerotwist" target="_blank">Paul Lewis</a></li>
+                            <li>ThreeJS <a href="https://twitter.com/mrdoob" target="_blank">Ricardo Cabello</a> <span class="buttery">@mrdoob</span></li>
+                            <li>Web Perf <a href="https://twitter.com/paul_irish" target="_blank">Paul Irish</a> <span class="buttery">@paul_irish</span></li>
+                            <li>Web Perf <a href="https://twitter.com/aerotwist" target="_blank">Paul Lewis</a> <span class="buttery">@aerotwist</span></li>
                         </ul>
                     </section>
 
-                    <section>
+                    <section data-background="images/excited.gif">
                         <h2 class="slide-title">That's all folks!</h2>
                     </section>
 
